@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Responsibility } from '../responsibility.model';
 
 @Component({
   selector: 'app-responsibility-detail',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./responsibility-detail.component.css']
 })
 export class ResponsibilityDetailComponent implements OnInit {
-
-  constructor() { }
+  @Input() responsibilities: Responsibility;
+  constructor() {}
 
   ngOnInit(): void {
   }
 
 }
+

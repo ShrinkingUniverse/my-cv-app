@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ResponsibilityDetailComponent } from './responsibility-detail/responsibility-detail.component';
+import { Responsibility } from './responsibility.model';
 
 @Component({
   selector: 'app-responcibilities-list',
@@ -8,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class ResponcibilitiesListComponent implements OnInit {
 
   constructor() { }
-
+ 
+ 
   ngOnInit(): void {
   }
 
