@@ -85,6 +85,8 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
+    font-weight: bold;
+    color: #1976d2
   }
 
   .card {
@@ -155,6 +157,7 @@
     z-index: -10;
   }
 
+
   a,
   a:visited,
   a:hover {
@@ -165,17 +168,36 @@
   a:hover {
     color: #125699;
   }
+    /* unvisited link */
+    a:link {
+      color: red;
+    }
 
-  .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
+    /* visited link */
+    a:visited {
+      color: #1976d2;
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: red;
+    }
+
+    /* selected link */
+    a:active {
+      color: #1976d2;
+    }
+
+    .terminal {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 6px;
+      padding-top: 45px;
+      margin-top: 8px;
+      overflow: hidden;
+      background-color: rgb(15, 15, 16);
+    }
 
   .terminal::before {
     content: "\2022 \2022 \2022";
@@ -308,13 +330,10 @@
 </div>
 
 <div class="content" role="main">
-  <span class="h2">CV of {{ title }}</span>
+  <span class="h2 card-container">CV of {{ title }}</span>
   <hr />
-  <div class="row">
-    <span class="h4 text-center" >Description</span>
-  </div>
-  <div *ngFor="let item of responsibilities">
-    <div class="row bg-info font-weight-bold">{{ item.companyName }}</div>
+  <div  *ngFor="let item of responsibilities">
+    <div class="row card-container"><a href="#" class="text-black" >{{ item.companyName }}</a></div>
     <div class="row">
     <div class="col-md-8" >
       <ul *ngFor="let single of item.responsibility">
