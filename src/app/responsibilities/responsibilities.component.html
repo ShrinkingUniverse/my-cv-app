@@ -1,0 +1,26 @@
+<style>
+  .margin-from-top {
+    margin-top: 20px
+  }
+</style>
+
+<div class="row">
+  <div class="col-md-7">
+    <app-responcibilities-list (companySelected) = "selectedCompany = $event">
+    </app-responcibilities-list>
+  </div>
+  <div class="col-md-5  margin-from-top">
+    <app-respocsibility-description
+      *ngIf= "selectedCompany; else infoText"
+      [company] = "selectedCompany">
+    </app-respocsibility-description>
+    <ng-template #infoText>
+      <p>.responsibilities &#123;</p>
+      <p>
+        Please select a company to get more details of responsibilities
+      </p>
+      <p>&#125;</p>
+    </ng-template>
+  </div>
+
+</div>

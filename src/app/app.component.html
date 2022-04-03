@@ -168,26 +168,7 @@
   a:hover {
     color: #125699;
   }
-    /* unvisited link */
-    a:link {
-      color: red;
-    }
-
-    /* visited link */
-    a:visited {
-      color: #1976d2;
-    }
-
-    /* mouse over link */
-    a:hover {
-      color: red;
-    }
-
-    /* selected link */
-    a:active {
-      color: #1976d2;
-    }
-
+ 
     .terminal {
       position: relative;
       width: 80%;
@@ -315,9 +296,7 @@
     }
   }
 
-  ul {
-    list-style-type: none;
-  }
+ 
 </style>
 
 <!-- Toolbar -->
@@ -328,55 +307,21 @@
   <span>Welcome</span>
 
 </div>
-
 <div class="content" role="main">
-  <span class="h2 card-container">CV of {{ title }}</span>
+  <span class="h2 card-container">{{ title }} CV</span>
   <hr />
- 
-    <table class="table-striped table-bordered" *ngFor="let item of responsibilities">
-      <thead>
-      <tr>
-        <th colspan="2">
-          <a href="#" class="text-black">{{ item.companyName }}</a>
-        </th>
-      </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="col-md-8" >
-            <ul *ngFor="let single of item.responsibility">
-              <li>{{ single }}</li>
-            </ul>
-          </td>
-          <td class="col-md-4" >
-            <ul *ngFor="let element of item.stack">
-              <li>{{ element }}</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
-    <!--<div class="row card-container"><a href="#" class="text-black" >{{ item.companyName }}</a></div>
-    <div class="row">
-    <div class="col-md-8" >
-      <ul *ngFor="let single of item.responsibility">
-        <li>{{ single }}</li>
-      </ul>
-    </div>
-    <div class="col-md-4" >
-      <ul *ngFor="let element of item.stack">
-        <li>{{ element }}</li>
-      </ul>
-    </div>
-    </div>-->
- 
+    <app-responsibilities>
+
+    </app-responsibilities>
+
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
       <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5" />
     </svg>
-
   </div>
+
+
 
 
 

@@ -1,7 +1,68 @@
-<div class="row">
+<style>
 
-  
-  <app-responsibility-detail>
-  </app-responsibility-detail>
- 
+.content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  .small-text {
+    font-size: 0.8rem;
+  }
+
+  .moderate-text {
+    font-size: 1rem;
+  }
+
+  /* unvisited link */
+  a:link {
+    color: red;
+  }
+
+  /* visited link */
+  a:visited {
+    color: #1976d2;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
+
+  /* selected link */
+  a:active {
+    color: #1976d2;
+  }
+  .margin-from-left {
+    margin-left: 15px
+  }
+  </style >
+
+<div class="content">
+  <table class="table-striped" *ngFor="let item of responsibilities">
+    <thead>
+      <tr>
+        <th class="col-md-3">
+          <a href="#" (click)="onSelected(item)" class="moderate-text"> {{ item.companyName }}</a>
+        </th>
+        <th class="col-md-4">
+          <a href="{{ item.urlAddress }}" class="small-text">click here to visit website</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <p class="margin-from-left">.stack of technologies &#123;</p>
+          <ul class="margin-from-left" *ngFor="let element of item.stack">
+            <li>{{ element }};</li>
+          </ul>
+          <p class="margin-from-left">&#125;</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
