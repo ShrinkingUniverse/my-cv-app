@@ -332,8 +332,32 @@
 <div class="content" role="main">
   <span class="h2 card-container">CV of {{ title }}</span>
   <hr />
-  <div  *ngFor="let item of responsibilities">
-    <div class="row card-container"><a href="#" class="text-black" >{{ item.companyName }}</a></div>
+ 
+    <table class="table-striped table-bordered" *ngFor="let item of responsibilities">
+      <thead>
+      <tr>
+        <th colspan="2">
+          <a href="#" class="text-black">{{ item.companyName }}</a>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-md-8" >
+            <ul *ngFor="let single of item.responsibility">
+              <li>{{ single }}</li>
+            </ul>
+          </td>
+          <td class="col-md-4" >
+            <ul *ngFor="let element of item.stack">
+              <li>{{ element }}</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--<div class="row card-container"><a href="#" class="text-black" >{{ item.companyName }}</a></div>
     <div class="row">
     <div class="col-md-8" >
       <ul *ngFor="let single of item.responsibility">
@@ -345,8 +369,7 @@
         <li>{{ element }}</li>
       </ul>
     </div>
-    </div>
-    </div>
+    </div>-->
  
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
