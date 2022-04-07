@@ -5,9 +5,6 @@
     flex-direction: column;
   }
 
-  ul {
-    list-style-type: none;
-  }
   .small-text {
     font-size: 0.8rem;
   }
@@ -18,7 +15,7 @@
 
   /* unvisited link */
   a:link {
-    color: red;
+    color: #1976d2;
   }
 
   /* visited link */
@@ -38,6 +35,11 @@
   .margin-from-left {
     margin-left: 15px
   }
+  .button-sm {
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 0px;
+  }
   </style >
 
 <div class="content">
@@ -45,7 +47,10 @@
     <thead>
       <tr>
         <th class="col-md-3">
-          <a href="#" (click)="onSelected(item)" class="moderate-text"> {{ item.companyName }}</a>
+          <a (click)="onSelected(item)" class="moderate-text pointer">
+            {{ item.companyName }}
+            <span class="caret"></span>
+          </a>
         </th>
         <th class="col-md-4">
           <a href="{{ item.urlAddress }}" class="small-text">click here to visit website</a>
@@ -54,13 +59,15 @@
     </thead>
     <tbody>
       <tr>
-        <td colspan="2">
+        <td class="col-md-3">
           <p class="margin-from-left">.stack of technologies &#123;</p>
           <ul class="margin-from-left" *ngFor="let element of item.stack">
             <li>{{ element }};</li>
           </ul>
           <p class="margin-from-left">&#125;</p>
         </td>
+        <td class="col-md-3">
+          </td>
       </tr>
     </tbody>
   </table>

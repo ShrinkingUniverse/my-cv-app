@@ -1,9 +1,9 @@
 
-<div class="row content">
-  <p>.responsibilities &#123;</p>
-  <p *ngFor="let responsibilityEl of company.responsibility">
-    {{responsibilityEl}}
-  </p>
-  <p>&#125;</p>
-</div>
+  <p class="margin-from-left">.responsibilities &#123;</p>
+  <ul class="margin-from-left" *ngFor="let responsibilityEl of company.responsibility">
+    <li>{{ responsibilityEl }};</li>
+  </ul>
+  <p class="margin-from-left">&#125;</p>
+
+
 

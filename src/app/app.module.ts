@@ -7,6 +7,8 @@ import { ResponcibilitiesListComponent } from './responcibilities-list/responcib
 import { ResponsibilityDetailComponent } from './responcibilities-list/responsibility-detail/responsibility-detail.component';
 import { ResponsibilitiesComponent } from './responsibilities/responsibilities.component';
 import { RespocsibilityDescriptionComponent } from './responcibilities-list/respocsibility-description/respocsibility-description.component';
+import { routing, RoutingComponent } from './routing/routing.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +16,14 @@ import { RespocsibilityDescriptionComponent } from './responcibilities-list/resp
     ResponcibilitiesListComponent,
     ResponsibilityDetailComponent,
     ResponsibilitiesComponent,
-    RespocsibilityDescriptionComponent
+    RespocsibilityDescriptionComponent,
+    RoutingComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
