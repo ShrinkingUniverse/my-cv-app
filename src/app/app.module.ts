@@ -8,6 +8,7 @@ import { ResponsibilityDetailComponent } from './responcibilities-list/responsib
 import { ResponsibilitiesComponent } from './responsibilities/responsibilities.component';
 import { RespocsibilityDescriptionComponent } from './responcibilities-list/respocsibility-description/respocsibility-description.component';
 import { routing, RoutingComponent } from './routing/routing.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { routing, RoutingComponent } from './routing/routing.component';
     ResponsibilityDetailComponent,
     ResponsibilitiesComponent,
     RespocsibilityDescriptionComponent,
-    RoutingComponent
+    RoutingComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
