@@ -10,6 +10,19 @@
   }
 </style>
 
+<ng-template #hearedTemplate let-text="title">
+  <p class="text-center">{{text}}</p>
+</ng-template>
+
+<ng-template
+  [ngTemplateOutlet] = "hearedTemplate"
+  [ngTemplateOutletContext] = "{title: 'Oops, something went wrong'}">
+  </ng-template>
 <div class="content-page">
+
   <h2>Page Not Found</h2>
 </div>
+<ng-template
+  [ngTemplateOutlet] = "hearedTemplate"
+  [ngTemplateOutletContext] = "{title: 'Please try another address or contact administrator'}">
+</ng-template>
