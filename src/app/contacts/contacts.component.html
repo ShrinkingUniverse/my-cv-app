@@ -1,0 +1,24 @@
+<style>
+  .highlited-header {
+    color: #1976d2;
+  }
+</style>
+
+<div class="content">
+  <form>
+    <div class="row h2 card-container">
+      <span>
+        {{title}}
+      </span>
+    </div>
+   
+    <hr />
+    <p class="margin-from-left h4 highlited-header">.contacts &#123;</p>
+    <ul class="margin-from-left" *ngFor="let link of myLinks">
+      <li>
+        <a href="{{ link.urlAddress }}">{{ link.name }}</a>
+      </li>
+    </ul>
+    <p class="margin-from-left h4 highlited-header">&#125;</p>
+  </form>
+</div>

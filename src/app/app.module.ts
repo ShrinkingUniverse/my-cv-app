@@ -10,6 +10,7 @@ import { RespocsibilityDescriptionComponent } from './responcibilities-list/resp
 import { routing, RoutingComponent } from './routing/routing.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     RespocsibilityDescriptionComponent,
     RoutingComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
