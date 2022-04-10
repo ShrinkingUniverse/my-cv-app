@@ -1,55 +1,17 @@
 <style>
-
-.content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .small-text {
-    font-size: 0.8rem;
-  }
-
   .moderate-text {
-    font-size: 1rem;
-  }
-
-  /* unvisited link */
-  a:link {
+    font-size: 20px;
     color: #1976d2;
   }
+</style>
 
-  /* visited link */
-  a:visited {
-    color: #1976d2;
-  }
-
-  /* mouse over link */
-  a:hover {
-    color: red;
-  }
-
-  /* selected link */
-  a:active {
-    color: #1976d2;
-  }
-  .margin-from-left {
-    margin-left: 15px
-  }
-  .button-sm {
-   display: flex;
-   justify-content: flex-end;
-   margin-top: 0px;
-  }
-  </style >
-
-<div class="content">
+<div>
   <table class="table-striped" *ngFor="let item of responsibilities">
     <thead>
       <tr>
         <th class="col-md-3">
           <a (click)="onSelected(item)" class="moderate-text pointer">
             {{ item.companyName }}
-            <span class="caret"></span>
           </a>
         </th>
         <th class="col-md-4">

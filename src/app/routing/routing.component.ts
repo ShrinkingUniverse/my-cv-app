@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from '../home/home.component';
 import { ResponsibilitiesComponent } from "../responsibilities/responsibilities.component";
 import { NotFoundComponent } from '../shared/not-found/not-found.component';
 
@@ -20,7 +21,7 @@ export class RoutingComponent implements OnInit {
 
 }
 const routes: Routes = [
-  { path: "", component: ResponsibilitiesComponent },
+  { path: "", component: HomeComponent },
   { path: "responsibilities", component: ResponsibilitiesComponent },
   { path: "**", component: NotFoundComponent }
 ]

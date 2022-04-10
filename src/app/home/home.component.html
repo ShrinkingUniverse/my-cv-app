@@ -1,0 +1,38 @@
+<style>
+  .highlited-header {
+    color: #1976d2;
+  }
+</style>
+
+<div class="content">
+  <form>
+    <div class="row h2 card-container">
+      <span>
+        {{title}}
+      </span>
+    </div>
+    <div class="row">
+      <span>
+        {{header}}
+      </span>
+    </div>
+    <hr />
+    <div class="row">
+      <p>
+        {{pageContent1}}
+      </p>
+      <p>
+        {{pageContent2}}
+      </p>
+      <p>
+        {{pageContent3}}
+      </p>
+    </div>
+    <hr />
+    <p class="margin-from-left h4 highlited-header">.courses &#123;</p>
+    <ul class="margin-from-left" *ngFor="let course of myCourses">
+      <li >{{ course }};</li>
+    </ul>
+    <p class="margin-from-left h4 highlited-header">&#125;</p>
+  </form>
+</div>

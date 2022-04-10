@@ -9,6 +9,7 @@ import { ResponsibilitiesComponent } from './responsibilities/responsibilities.c
 import { RespocsibilityDescriptionComponent } from './responcibilities-list/respocsibility-description/respocsibility-description.component';
 import { routing, RoutingComponent } from './routing/routing.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
     ResponsibilitiesComponent,
     RespocsibilityDescriptionComponent,
     RoutingComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

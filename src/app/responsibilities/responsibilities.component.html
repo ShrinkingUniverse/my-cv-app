@@ -1,15 +1,15 @@
 <style>
   .margin-from-top {
-    margin-top: 20px
+    margin-top: 50px
   }
 </style>
 
-<div class="row">
+<div class="row margin-from-top">
   <div class="col-md-7">
     <app-responcibilities-list (companySelected) = "selectedCompany = $event">
     </app-responcibilities-list>
   </div>
-  <div class="col-md-5  margin-from-top">
+  <div class="col-md-5">
     <app-respocsibility-description
       *ngIf= "selectedCompany; else infoText"
       [company] = "selectedCompany">
