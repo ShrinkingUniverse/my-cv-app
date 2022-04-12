@@ -5,20 +5,59 @@
 </style>
 
 <div class="content">
-  <form>
-    <div class="row card-container">
-      <span>
-        {{ title }}
-      </span>
+  <div class="row">
+    <div class="col-md-8 justify-left">
+      {{ title }}
+
+      <hr />
+      <p class="margin-from-left h4 highlited-header">.contacts &#123;</p>
+      <ul class="margin-from-left" *ngFor="let link of myLinks">
+        <li>
+          <a href="{{ link.urlAddress }}">{{ link.name }}</a>
+        </li>
+      </ul>
+      <p class="margin-from-left h4 highlited-header">&#125;</p>
     </div>
-   
-    <hr />
-    <p class="margin-from-left h4 highlited-header">.contacts &#123;</p>
-    <ul class="margin-from-left" *ngFor="let link of myLinks">
-      <li>
-        <a href="{{ link.urlAddress }}">{{ link.name }}</a>
-      </li>
-    </ul>
-    <p class="margin-from-left h4 highlited-header">&#125;</p>
-  </form>
+
+    <div class="col-md-4">
+      <form novalidate #form="ngForm" (ngSubmit)="submitForm(form)">
+        <div class="form-group">
+          <label>Your name</label>
+          <input class="form-control"
+                 [(ngModel)]="newMessage.senderName" name="senderName"
+                 #name="ngModel"
+                 pattern="^[A-Za-z ]+$">
+          <ul class="text-danger list-unstyled" *ngIf="name.dirty && name.invalid">
+            <li *ngIf="name.errors?.pattern">
+              Name can only contain letters and spaces
+            </li>
+            </ul>
+
+        </div>
+        <div class="form-group">
+          <label>Your email</label>
+          <input class="form-control"
+                 [(ngModel)]="newMessage.senderAddress" name="senderAddress"
+                 #address="ngModel"
+                 pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
+          <ul class="text-danger list-unstyled" *ngIf="address.dirty && address.invalid">
+            <li *ngIf="address.errors?.pattern">
+              Please enter correct email address
+            </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <input class="form-control"
+                 [(ngModel)]="newMessage.messageBody" name="messageBody">
+
+        </div>
+        <button class="btn btn-primary" type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
+
+
