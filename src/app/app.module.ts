@@ -11,6 +11,7 @@ import { routing, RoutingComponent } from './routing/routing.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     RoutingComponent,
     NotFoundComponent,
     HomeComponent,
-    ContactsComponent
+    ContactsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
