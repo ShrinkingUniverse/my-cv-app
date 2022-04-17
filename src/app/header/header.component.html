@@ -5,9 +5,10 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="mav-item active"><a class="nav-link" href="#">Main</a></li>
-        <li class="mav-item"><a class="nav-link" href="#">Experience</a></li>
-        <li class="mav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/" >Main</a></li>
+        <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/responsibilities">Experience</a></li>
+        <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/contacts">Contact</a></li>
       </ul>
     </div>
   </div>
