@@ -25,7 +25,7 @@ import { HeaderComponent } from './header/header.component';
     NotFoundComponent,
     HomeComponent,
     ContactsComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
