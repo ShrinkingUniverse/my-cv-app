@@ -12,6 +12,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    BrowserAnimationsModule
     
   ],
   providers: [],
