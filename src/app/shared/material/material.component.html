@@ -1,0 +1,8 @@
+<mat-toolbar>
+  <!--<div class="flex-stretch"></div>-->
+ 
+  <!--<mat-slide-toggle [formControl]="toggleControl" class="mr-8">-->
+  <mat-slide-toggle [checked]="isDarkTheme | async"
+                    (change)="toggleDarkTheme($event.checked)">Dark theme</mat-slide-toggle>
+  <!--</mat-slide-toggle>-->
+</mat-toolbar>

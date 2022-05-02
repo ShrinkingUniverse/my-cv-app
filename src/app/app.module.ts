@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToolbarModule } from './shared/material/material.module';
+import { MaterialComponent } from './shared/material/material.component';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -26,14 +29,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotFoundComponent,
     HomeComponent,
     ContactsComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     routing,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    ToolbarModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

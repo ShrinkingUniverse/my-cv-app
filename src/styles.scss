@@ -1,5 +1,6 @@
 
-@use '@angular/material' as mat;
+@import './styles/material-theme';
+/*@use '@angular/material' as mat;
 @include mat.core();
 
 // Define a light theme
@@ -15,16 +16,30 @@ $dark-theme: mat.define-dark-theme(( color: ( primary: $dark-primary, accent: $d
 @include mat.core-theme($dark-theme);
 @include mat.button-theme($dark-theme);
 
-/*.my-dark-theme {
+.my-dark-theme {
   @include mat.core-theme($dark-theme);
   @include mat.button-theme($dark-theme);
-  }*/
+  }
   // Apply the light theme only when the `.my-light-theme` CSS class is applied
   // to an ancestor element of the components (such as `body`).
   .my-light-theme {
     @include mat.core-color($light-theme);
     @include mat.button-color($light-theme);
-  }
+  }*/
+
+/*:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #1976d2;
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: white;
+}*/
+.mat-toolbar {
+  background: #1976d2;
+  color: white;
+  font-size: 11px;
+  align-items: right;
+}
 
   ul {
     list-style-type: none;
@@ -55,36 +70,36 @@ $dark-theme: mat.define-dark-theme(( color: ( primary: $dark-primary, accent: $d
     flex: 1;
   }
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
 
-    img {
-      margin: 0 16px;
-    }
-
-    #twitter-logo {
-      height: 40px;
-      margin: 0 8px;
-    }
-
-    #youtube-logo {
-      height: 40px;
-      margin: 0 16px;
-    }
-
-    #twitter-logo:hover, #youtube-logo:hover {
-      opacity: 0.8;
-    }
+  img {
+    margin: 0 16px;
   }
+
+  #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  #twitter-logo:hover, #youtube-logo:hover {
+    opacity: 0.8;
+  }
+}
 
   .content {
     display: flex;
